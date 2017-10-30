@@ -6,11 +6,13 @@ When giving talks, I generally try to avoid plain slide decks. I usually build m
 
 Below are some example talks I've given in this style. When you open them, you can **use the spacebar to move to the next slide**, or the left and right arrow keys to move back and forth.
 
+Keep in mind that the elasicon presentation will be more formal than these examples. The nature of the talks and the target audience allowed them to be very fun and filled with memes, but an elasticon talk would naturally be more stoic and profesional.
+
 ### The Grand Journey of Search: A DataContext Story
 
 https://smartprocure.github.io/dc-talk
 
-This is an older, very informal talk covering some of the contexture-client design. Back then, contexture leaf nodes were referred to as DataContexts, and non leaf nodes were called ContextGroups.
+This is an older, very informal talk covering some of the contexture-client design. Back then, contexture leaf nodes were referred to as `DataContexts`, and non leaf nodes were called `ContextGroups`.
     
 ### Sails v0.11 Upgrade
 
@@ -18,4 +20,4 @@ https://app.smartprocure.us/docs/presentations/sails11
 
 This begins as a "normal" slide show but quickly transforms into something else entirely. This was one of my first talks in this style.
 
-We use `sailsjs` for some projects at SmartProcure, and when we upgraded from 0.9 to 0.11 in 2015 there were a lot of changes. Instead of a boring list, this presentation was built to show all things that people would notice that was different after the upgrade.
+We use `sailsjs` for some projects at SmartProcure, and there were a lot of changes when we upgraded from 0.9 to 0.11 in 2015. Instead of a boring list, this presentation was built to show everything people would notice that was different after the upgrade.
