@@ -6,7 +6,7 @@ When giving talks, I generally try to avoid plain slide decks. I usually build m
 
 Below are some example talks I've given in this style. When you open them, you can **use the spacebar to move to the next slide**, or the left and right arrow keys to move back and forth.
 
-Keep in mind that the elasicon presentation will be more formal than these examples. The nature of the talks and the target audience allowed them to be very fun and filled with memes, but an elasticon talk would naturally be more stoic and profesional.
+Keep in mind that the elasicon presentation will be more formal than these examples. The nature of the talks and the target audience allowed them to be very fun and filled with memes, but an elasticon talk would naturally be more stoic and professional.
 
 ### The Grand Journey of Search: A DataContext Story
 
