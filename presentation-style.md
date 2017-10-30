@@ -13,6 +13,8 @@ Keep in mind that the elasicon presentation will be more formal than these examp
 https://smartprocure.github.io/dc-talk
 
 This is an older, very informal talk covering some of the contexture-client design. Back then, contexture leaf nodes were referred to as `DataContexts`, and non leaf nodes were called `ContextGroups`.
+
+It's also worth pointing out that early on in the presentation, there's a part that seems a bit incoherent and hard to follow, which is _intentional_. It's an attempt to narrate how a design without our solution devolves into unmanageable complexity and should in fact be hard to follow. 
     
 ### Sails v0.11 Upgrade
 
