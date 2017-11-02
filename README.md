@@ -3,5 +3,7 @@
 This repo includes additional information about the proposed Elasticon 2018 talk, Building Highly Interactive Data Exploration Interfaces. It will eventually also include the actual source of the presentation itself.
 
 - [abstract](/abstract.md) is the talk's abstract. It's what the talk will cover.
+- [speaker-bio](/speaker-bio.md) has background info on the speaker.
 - [presentation-style](/presentation-style.md) describes the speaker's presentation style and includes some links to prior talks.
-- [screenshots](/screenshots/README.md) Some screenshots of applications built with `contexture`, covered by the talk.
+- [screenshots](/screenshots/README.md) has some screenshots of applications built with `contexture`, covered by the talk.
+
