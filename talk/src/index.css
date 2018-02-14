@@ -3,3 +3,46 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+#react-impressjs.impress-supported {
+  background: url(https://shaunlebron.github.io/t3tr0s-slides/black-Linen2.png);
+}
+
+.text-xs {
+  font-size: 33%;
+}
+
+.fadesIn,
+.fadesInOnly {
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.present .fadesIn {
+  opacity: 100;
+}
+
+.present .fadesInOnly, 
+.past .fadesInOnly {
+  opacity: 100;
+}
+
+
+.popsIn,
+.popsInOnly {
+  display: none;
+  transition: 0.5s;
+}
+
+.present .popsIn {
+  display: block;
+}
+
+
+.alg ul {
+  list-style-type: circle;
+  margin-left: 50px;
+}
+.alg code {
+  font-family: monospace;
+}
