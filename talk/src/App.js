@@ -8,7 +8,7 @@ import Highlight from 'react-highlight'
 import 'highlight.js/styles/hybrid.css'
 
 import AdvancedSearch from './advanced-search'
-import SearchGUI from './tree'
+import SearchGUI from './contexture/demo'
 import * as snippets from './snippets'
 import {Flex} from './flex'
 

@@ -2,15 +2,15 @@ import React from 'react'
 import _ from 'lodash/fp'
 import * as F from 'futil-js'
 import {observer, Provider} from 'mobx-react'
-import Contexture from './contexture/contexture-mobx'
-import {Flex} from './flex'
+import Contexture from './contexture-mobx'
 import {
   Facet,
   Range,
   Query,
   ResultCount,
   DateHistogram,
-} from './contexture/components'
+} from './components'
+import {Flex} from '../flex'
 
 let tree = Contexture({
   key: 'searchRoot',
