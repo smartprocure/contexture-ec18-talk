@@ -243,9 +243,9 @@ let SearchAnatomy = ({step = 0}) => (
 export default () => (
   <Impress progress={true}>
     {XLayout([
-      <Card>
-        <SearchGUI />
-      </Card>,
+      // <Card>
+      //   <SearchGUI />
+      // </Card>,
       <Title>Building Highly Interactive Data Exploration Interfaces</Title>,
       <Title>Hi.</Title>,
       YLayout([
