@@ -3,7 +3,7 @@ import _ from 'lodash/fp'
 import * as F from 'futil-js'
 import {observer, inject} from 'mobx-react'
 import {Flex} from '../flex'
-import './contexture.css'
+import './components.css'
 
 export let Facet = inject('tree')(observer(({tree, node, hide = {}, ...props}) => (
   <div {...props}>
