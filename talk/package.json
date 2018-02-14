@@ -3,8 +3,20 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "contexture": "^0.2.1",
+    "contexture-client": "^2.1.1",
+    "contexture-elasticsearch": "^0.6.5",
+    "contexture-react": "^0.2.1",
+    "elasticsearch-browser": "^14.1.0",
+    "futil-js": "^1.42.3",
+    "lodash": "^4.17.5",
+    "mobx": "^3.5.1",
+    "mobx-react": "^4.4.1",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
+    "react-highlight": "briancappello/react-highlight#react-v16-compiled",
+    "react-impressjs": "^1.1.0",
+    "react-markdown": "^3.2.0",
     "react-scripts": "1.1.1"
   },
   "scripts": {
