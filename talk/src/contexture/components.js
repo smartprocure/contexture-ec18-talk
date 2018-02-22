@@ -5,7 +5,14 @@ import {observer, inject} from 'mobx-react'
 import {Flex} from '../flex'
 import './components.css'
 
-export let Facet = inject('tree')(observer(({tree, node, hide = {}, ...props}) => (
+export let InjectTreeNode = inject(
+  ({tree}, {tree: tree2, path}) => ({
+    tree: tree2 || tree,
+    node: (tree2 || tree).getNode(path)
+  })
+)
+
+export let Facet = InjectTreeNode(observer(({tree, node, hide = {}, ...props}) => (
   <div {...props}>
     {!hide.facetFilter && (
       <input
@@ -42,7 +49,7 @@ export let Facet = inject('tree')(observer(({tree, node, hide = {}, ...props}) =
   </div>
 )))
 
-export let Range = inject('tree')(observer(({tree, node, ...props}) => (
+export let Range = InjectTreeNode(observer(({tree, node, ...props}) => (
   <Flex {...props}>
     <input
       className="contexture-search-box"
@@ -60,7 +67,7 @@ export let Range = inject('tree')(observer(({tree, node, ...props}) => (
   </Flex>
 )))
 
-export let Query = inject('tree')(observer(({tree, node, style, ...props}) => (
+export let Query = InjectTreeNode(observer(({tree, node, style, ...props}) => (
   <input
     className="contexture-search-box"
     style={{padding: '15px', ...style}}
@@ -75,7 +82,7 @@ export let Query = inject('tree')(observer(({tree, node, style, ...props}) => (
   />
 )))
 
-export let ResultCount = observer(({node, ...props}) => (
+export let ResultCount = InjectTreeNode(observer(({node, ...props}) => (
   <div style={{textAlign: 'center'}} {...props}>
     {node.context.response.results.length
       ? `Viewing records ${node.context.response.startRecord} - ${
@@ -83,9 +90,9 @@ export let ResultCount = observer(({node, ...props}) => (
         } out of ${node.context.response.totalRecords}`
       : 'No Results'}
   </div>
-))
+)))
 
-export let DateHistogram = observer(
+export let DateHistogram = InjectTreeNode(observer(
   ({node, format, height = 100, background = () => '#ccc'}) => {
     let max = _.get('count', _.maxBy('count', node.context.entries))
     return (
@@ -107,4 +114,4 @@ export let DateHistogram = observer(
       </Flex>
     )
   }
-)
+))
