@@ -6,9 +6,9 @@ import {Flex} from '../flex'
 import './components.css'
 
 export let InjectTreeNode = inject(
-  ({tree}, {tree: tree2, path}) => ({
-    tree: tree2 || tree,
-    node: (tree2 || tree).getNode(path)
+  ({tree: t1}, {tree = t1, path}) => ({
+    tree,
+    node: tree.getNode(path)
   })
 )
 
