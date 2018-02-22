@@ -9,8 +9,7 @@ export default _.flow(
     service: async dto => ({
       data: await service(dto),
     }),
-    debounce: 500,
-    types: _.omit(['default'], exampleTypes),
+    types: exampleTypes,
     // debug: true,
     snapshot: toJS,
     extend: extendObservable,
