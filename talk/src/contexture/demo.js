@@ -9,6 +9,7 @@ import {
   Query,
   ResultCount,
   DateHistogram,
+  InjectTreeNode
 } from './components'
 import {Flex} from '../flex'
 
@@ -77,7 +78,7 @@ let tree = Contexture({
   ],
 })
 
-let IMDBCards = observer(({node}) => (
+let IMDBCards = InjectTreeNode(observer(({node}) => (
   <Flex style={{flexWrap: 'wrap', justifyContent: 'center'}}>
     {_.map(
       ({_id, _source: {title, poster}}) => (
@@ -89,7 +90,7 @@ let IMDBCards = observer(({node}) => (
       node.context.response.results
     )}
   </Flex>
-))
+)))
 let formatYear = x => new Date(x).getFullYear() + 1
 
 export default observer(({hide = {}}) => (
@@ -100,7 +101,7 @@ export default observer(({hide = {}}) => (
           width: '700px',
           fontSize: '18px',
         }}
-        node={tree.getNode(['searchRoot', 'searchQuery'])}
+        path={['searchRoot', 'searchQuery']}
       />
       <Flex>
         <div style={{flex: 1}}>
@@ -109,7 +110,7 @@ export default observer(({hide = {}}) => (
               <b>MetaScore</b>
               <Range
                 style={{padding: '10px'}}
-                node={tree.getNode(['searchRoot', 'searchRange'])}
+                path={['searchRoot', 'searchRange']}
               />
             </div>
           )}
@@ -119,7 +120,7 @@ export default observer(({hide = {}}) => (
               <Facet
                 hide={hide}
                 style={{padding: '10px'}}
-                node={tree.getNode(['searchRoot', 'searchFacet'])}
+                path={['searchRoot', 'searchFacet']}
               />
             </div>
           )}
@@ -129,20 +130,20 @@ export default observer(({hide = {}}) => (
               <Facet
                 hide={hide}
                 style={{padding: '10px'}}
-                node={tree.getNode(['searchRoot', 'searchActors'])}
+                path={['searchRoot', 'searchActors']}
               />
             </div>
           )}
         </div>
         <div style={{flex: 4}}>
-          <ResultCount node={tree.getNode(['searchRoot', 'results'])} />
+          <ResultCount path={['searchRoot', 'results']} />
           {!hide.dateChart && (
             <DateHistogram
-              node={tree.getNode(['searchRoot', 'releases'])}
+              path={['searchRoot', 'releases']}
               format={formatYear}
             />
           )}
-          <IMDBCards node={tree.getNode(['searchRoot', 'results'])} />
+          <IMDBCards path={['searchRoot', 'results']} />
         </div>
       </Flex>
     </div>
