@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "contexture": "^0.2.1",
-    "contexture-client": "^2.1.1",
+    "contexture-client": "^2.2.2",
     "contexture-elasticsearch": "^0.6.5",
     "contexture-react": "^0.2.1",
     "elasticsearch-browser": "^14.1.0",
